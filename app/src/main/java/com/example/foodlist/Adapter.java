@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -34,12 +35,14 @@ public class Adapter extends ArrayAdapter<FoodItem> {
         TextView name = currentView.findViewById(R.id.food_name);
         TextView category = currentView.findViewById(R.id.food_category);
         TextView price = currentView.findViewById(R.id.food_price);
+        ImageView imgView = currentView.findViewById(R.id.food_img);
 
         FoodItem obj = getItem(position);
 
         name.setText(obj.getName());
         category.setText(obj.getCategory());
         price.setText("\u20B9" + obj.getPrice());
+        imgView.setImageDrawable(obj.getImg());
 
         return currentView;
     }

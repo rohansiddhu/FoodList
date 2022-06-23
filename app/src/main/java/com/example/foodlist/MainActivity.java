@@ -23,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<FoodItem> foodItemList = new ArrayList<>();
 
-        foodItemList.add(new FoodItem("Pizza", "Italian", 670));
-        foodItemList.add(new FoodItem("Ramen", "Japanese", 435));
-        foodItemList.add(new FoodItem("Sushi", "Japanese", 355));
-        foodItemList.add(new FoodItem("Ratatouille", "French", 190));
-        foodItemList.add(new FoodItem("Dosa", "Indian", 155));
+        foodItemList.add(new FoodItem("Pizza", "Italian", 670, getDrawable(R.drawable.pizza)));
+        foodItemList.add(new FoodItem("Ramen", "Japanese", 435, getDrawable(R.drawable.ramen)));
+        foodItemList.add(new FoodItem("Sushi", "Japanese", 355, getDrawable(R.drawable.sushi)));
+        foodItemList.add(new FoodItem("Ratatouille", "French", 190, getDrawable(R.drawable.ratatouille)));
+        foodItemList.add(new FoodItem("Dosa", "Indian", 155, getDrawable(R.drawable.dosa)));
 
         Adapter adapter = new Adapter(getApplicationContext(), foodItemList);
         foodListView.setAdapter(adapter);
